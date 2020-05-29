@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+iframe {
+  width: 100%;
+}
+
+/* Font */
+
+* {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}
+
+/* The navigation bar */
+nav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+nav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Header and Text    */
+header {
+  background-image: url("https://images.unsplash.com/photo-1522171474046-58bcd565d866?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px 60px 20px 60px;
+}
+
+.headshot {
+  width: 100px;
+  height: 110px;
+  float: left;
+}
+
+body {
+  background-color: #ddd;
+  margin: 20px 60px 20px 60px;
+}
+
+section {
+  border-bottom: #333 1px solid;
+}
+
+img {
+  width: 100%;
+}
+
+/* Porfolio section     */
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.project {
+  flex: 1;
+  margin: 12px;
+}
+
+/* Headings ////*/
+
+h1 {
+  text-align: right;
+}
+
+h2 {
+  font-size: 150%;
+}
+
+h3 {
+  font-size: 120%;
+  text-decoration: underline;
+}
+
+/* Media QUeries    */
+@media all and (min-width: 800px) {
+  .wrapper {
+    width: 80%;
+    margin: auto;
+  }
+
+  .group {
+    flex-direction: row;
+  }
+
+  nav {
+    display: wrap;
+  }
+}
+
+main h1 {
+  margin: 0 10px;
+  border-bottom: 1px solid gray;
+}
+
+main h2 {
+  margin: 12px 0;
+  border-bottom: 1px solid lightgray;
+}
+
+main img {
+  width: 100%;
+}
+
+/* Contact Form - Image */
+
+.contact-image {
+  border: 1px solid #ababab;
+  border-radius: 8px;
+}
+
+/* Groups & Items  (Mobile First) */
+.wrapper {
+  width: 100%;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.item {
+  flex: 1;
+  margin: 10px;
+}
+
+.item-double {
+  flex: 2;
+  margin: 10px;
+}
+
+/* Groups & Items  (Desktop) */
+
+@media all and (min-width: 800px) {
+  .wrapper {
+    width: 80%;
+    margin: auto;
+  }
+
+  .group {
+    flex-direction: row;
+  }
+}
+
+/* Contact Form Design */
+
+form {
+  padding-right: 6px;
+  /* Fixed small sizing issue on the right */
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+form textarea {
+  height: 160px;
+}
