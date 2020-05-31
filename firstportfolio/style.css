@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
-iframe {
+/*iframe {
   width: 100%;
-}
+} */
 
 /* Font */
 
@@ -11,13 +11,50 @@ iframe {
   font-size: 18px;
 }
 
-/* The navigation bar */
-nav {
-  background-color: #333;
-  overflow: hidden;
+/* Header     */
+
+header {
+  background-image: url("https://images.unsplash.com/photo-1522171474046-58bcd565d866?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 40px;
+  /* margin: 20px 60px 20px 60px;*/
 }
 
-nav a {
+h1 {
+  color: black;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 52px;
+  margin: 0;
+  font-family: Lato;
+}
+
+.headshot {
+  width: 100px;
+  height: 113px;
+  float: left;
+}
+
+/* The navigation bar */
+header nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 0;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
   float: right;
   display: block;
   color: #f2f2f2;
@@ -27,23 +64,10 @@ nav a {
   font-size: 17px;
 }
 
-/* Header and Text    */
-header {
-  background-image: url("https://images.unsplash.com/photo-1522171474046-58bcd565d866?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 20px 60px 20px 60px;
-}
-
-.headshot {
-  width: 100px;
-  height: 110px;
-  float: left;
-}
-
 body {
   background-color: #ddd;
   margin: 20px 60px 20px 60px;
+  line-height: 1.5rem;
 }
 
 section {
@@ -55,9 +79,15 @@ img {
 }
 
 /* Porfolio section     */
+/*   (Mobile First) */
+.wrapper {
+  width: 100%;
+}
+
 .group {
   display: flex;
   flex-direction: column;
+  margin-bottom: 100px;
 }
 
 .project {
@@ -67,12 +97,10 @@ img {
 
 /* Headings ////*/
 
-h1 {
-  text-align: right;
-}
-
 h2 {
   font-size: 150%;
+  margin: 12px 0;
+  border-bottom: 1px solid lightgray;
 }
 
 h3 {
@@ -81,29 +109,46 @@ h3 {
 }
 
 /* Media QUeries    */
-@media all and (min-width: 800px) {
+
+@media all and (min-width: 600px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  header h1 {
+    font-size: 42px;
+    margin: 14px 0 14px 14px;
+  }
+  header nav {
+    margin-top: 0px;
+  }
+
+  header nav ul {
+    margin-top: 35px;
+  }
+
   .wrapper {
     width: 80%;
     margin: auto;
   }
 
   .group {
+    display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
   }
 
-  nav {
-    display: wrap;
+  .mindset,
+  .time,
+  .dateNight {
+    flex-grow: 1;
+    margin: 10px;
   }
-}
 
-main h1 {
-  margin: 0 10px;
-  border-bottom: 1px solid gray;
-}
-
-main h2 {
-  margin: 12px 0;
-  border-bottom: 1px solid lightgray;
+  .project {
+    flex-grow: 1;
+    margin: 10px;
+  }
 }
 
 main img {
@@ -115,40 +160,6 @@ main img {
 .contact-image {
   border: 1px solid #ababab;
   border-radius: 8px;
-}
-
-/* Groups & Items  (Mobile First) */
-.wrapper {
-  width: 100%;
-}
-
-.group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 100px;
-}
-
-.item {
-  flex: 1;
-  margin: 10px;
-}
-
-.item-double {
-  flex: 2;
-  margin: 10px;
-}
-
-/* Groups & Items  (Desktop) */
-
-@media all and (min-width: 800px) {
-  .wrapper {
-    width: 80%;
-    margin: auto;
-  }
-
-  .group {
-    flex-direction: row;
-  }
 }
 
 /* Contact Form Design */
